@@ -2,6 +2,8 @@
 Generic storage interface, which abstracts the storage method from the app.
 
 App Interface:
+* Key: value pairs and stored within a document (basically a dict, that stores only bytes), each with a unqiue ID. 
+  * Example application is a Note object, with a single document linked to it. The Note has a key:value pair for the title, body, date etc.
 * Simple api methods: open, close, get, get_document, put, delete, delete_document, sync, count
 * Stores key:value pairs against a unqiue id number. 
   * Unique id comes from the UID class (as simple as ```UID.new()```)
@@ -26,3 +28,4 @@ Notes
 
 TODO:
 * Write more backends
+* Write more structured test code
